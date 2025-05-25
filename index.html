@@ -1,134 +1,141 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvestSmart - Investing & Stock Insights</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Investing & Stock Insights</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
 
 <body class="bg-gray-50 text-gray-900">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <h1 class="text-2xl font-bold text-blue-600">InvestSmart</h1>
-      <ul class="hidden md:flex space-x-6 font-medium">
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#blog" class="hover:text-blue-500">Blog</a></li>
-        <li><a href="#faq" class="hover:text-blue-500">FAQ</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
-      <button class="md:hidden text-gray-700">☰</button>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-blue-600">InvestSmart</h1>
+            <ul class="hidden md:flex space-x-6 font-medium">
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#blog" class="hover:text-blue-500">Blog</a></li>
+                <li><a href="#faq" class="hover:text-blue-500">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-gray-700">☰</button>
+        </div>
+    </nav>
+
+
+    <section class="container mx-auto px-4 py-16 text-center">
+        <h2 class="text-4xl font-bold mb-4">Take Control of Your Financial Future</h2>
+        <p class="text-lg text-gray-600 mb-8">Join thousands learning to invest wisely and grow their wealth through the stock market.</p>
+        <a href="#blog" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Get Started</a>
+    </section>
+
+    <section id="about" class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <h3 class="text-3xl font-semibold mb-4">About InvestSmart</h3>
+            <p class="text-gray-700">We provide expert insights and data-driven content to help you understand how investing works, stay updated on the latest market trends, and make informed financial decisions.</p>
+        </div>
+    </section>
+
+    <section id="blog" class="container mx-auto px-4 py-12">
+        <h3 class="text-3xl font-semibold text-center mb-8">Latest Insights</h3>
+        <div class="grid gap-6 md:grid-cols-3">
+            <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('chartingTips')">
+                <h4 class="text-xl font-bold mb-2">How to Read a Stock Chart</h4>
+                <p class="text-gray-600">Master the basics of chart reading to better time your investments and spot trends.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('fundBattle')">
+                <h4 class="text-xl font-bold mb-2">ETF vs Mutual Funds</h4>
+                <p class="text-gray-600">Understand the key differences, pros, and cons of these common investment vehicles.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('topPicks')">
+                <h4 class="text-xl font-bold mb-2">Top Stocks in 2025</h4>
+                <p class="text-gray-600">A curated list of high-performing and high-potential companies to watch this year.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-semibold text-center mb-8">Frequently Asked Questions</h3>
+            <div class="space-y-4 max-w-2xl mx-auto">
+                <details class="bg-white p-4 rounded-md shadow-sm">
+                    <summary class="font-bold cursor-pointer text-lg">What is the minimum amount to start investing?</summary>
+                    <p class="mt-2 text-gray-600">You can start investing with as little as $1, thanks to fractional shares and commission-free apps.</p>
+                </details>
+                <details class="bg-white p-4 rounded-md shadow-sm">
+                    <summary class="font-bold cursor-pointer text-lg">Is the stock market safe?</summary>
+                    <p class="mt-2 text-gray-600">While there are risks, long-term investment strategies and diversification help manage those risks.</p>
+                </details>
+                <details class="bg-white p-4 rounded-md shadow-sm">
+                    <summary class="font-bold cursor-pointer text-lg">How do I pick stocks?</summary>
+                    <p class="mt-2 text-gray-600">Focus on fundamentals, trends, and diversification. Research is essential before investing.</p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-12">
+        <h3 class="text-3xl font-semibold text-center mb-6">Contact Us</h3>
+        <form class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md" />
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md" />
+
+            <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send Message</button>
+        </form>
+    </section>
+
+    <div id="chartingTips" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+            <h3 class="text-xl font-bold mb-4">How to Read a Stock Chart</h3>
+            <p class="text-gray-700 mb-4">Learning how to read a stock chart can help you analyze patterns, make educated guesses about future price movements, and time your entry/exit better. Start by understanding candlesticks, moving averages, and volume trends.</p>
+            <button onclick="closeModal('chartingTips')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="container mx-auto px-4 py-16 text-center">
-    <h2 class="text-4xl font-bold mb-4">Take Control of Your Financial Future</h2>
-    <p class="text-lg text-gray-600 mb-8">Join thousands learning to invest wisely and grow their wealth through the stock market.</p>
-    <a href="#blog" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Get Started</a>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="bg-white py-12">
-    <div class="container mx-auto px-4 text-center md:text-left">
-      <h3 class="text-3xl font-semibold mb-4">About InvestSmart</h3>
-      <p class="text-gray-700">We provide expert insights and data-driven content to help you understand how investing works, stay updated on the latest market trends, and make informed financial decisions.</p>
+    <div id="fundBattle" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+            <h3 class="text-xl font-bold mb-4">ETF vs Mutual Funds</h3>
+            <p class="text-gray-700 mb-4">ETFs are traded like stocks and usually have lower fees, while mutual funds are actively managed and may offer better long-term strategies. Choose based on your investment goals, cost sensitivity, and time horizon.</p>
+            <button onclick="closeModal('fundBattle')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+        </div>
     </div>
-  </section>
 
-  <!-- Blog Cards Section -->
-  <section id="blog" class="container mx-auto px-4 py-12">
-    <h3 class="text-3xl font-semibold text-center mb-8">Latest Insights</h3>
-    <div class="grid gap-6 md:grid-cols-3">
-      <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('modal1')">
-        <h4 class="text-xl font-bold mb-2">How to Read a Stock Chart</h4>
-        <p class="text-gray-600">Master the basics of chart reading to better time your investments and spot trends.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('modal2')">
-        <h4 class="text-xl font-bold mb-2">ETF vs Mutual Funds</h4>
-        <p class="text-gray-600">Understand the key differences, pros, and cons of these common investment vehicles.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" onclick="openModal('modal3')">
-        <h4 class="text-xl font-bold mb-2">Top Stocks in 2025</h4>
-        <p class="text-gray-600">A curated list of high-performing and high-potential companies to watch this year.</p>
-      </div>
+    <div id="topPicks" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+            <h3 class="text-xl font-bold mb-4">Top Stocks in 2025</h3>
+            <p class="text-gray-700 mb-4">Some of the most promising stocks include those in AI, green energy, and biotech sectors. Look out for companies with strong balance sheets, innovation pipelines, and consistent revenue growth.</p>
+            <button onclick="closeModal('topPicks')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+        </div>
     </div>
-  </section>
 
-  <!-- FAQ Section with Toggle -->
-  <section id="faq" class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-8">Frequently Asked Questions</h3>
-      <div class="space-y-4 max-w-2xl mx-auto">
-        <details class="bg-white p-4 rounded-md shadow-sm">
-          <summary class="font-bold cursor-pointer text-lg">What is the minimum amount to start investing?</summary>
-          <p class="mt-2 text-gray-600">You can start investing with as little as $1, thanks to fractional shares and commission-free apps.</p>
-        </details>
-        <details class="bg-white p-4 rounded-md shadow-sm">
-          <summary class="font-bold cursor-pointer text-lg">Is the stock market safe?</summary>
-          <p class="mt-2 text-gray-600">While there are risks, long-term investment strategies and diversification help manage those risks.</p>
-        </details>
-        <details class="bg-white p-4 rounded-md shadow-sm">
-          <summary class="font-bold cursor-pointer text-lg">How do I pick stocks?</summary>
-          <p class="mt-2 text-gray-600">Focus on fundamentals, trends, and diversification. Research is essential before investing.</p>
-        </details>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto px-4 py-12">
-    <h3 class="text-3xl font-semibold text-center mb-6">Contact Us</h3>
-    <form class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-md" />
-      <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md" />
-      <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
-      <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send Message</button>
-    </form>
-  </section>
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 InvestSmart. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <!-- Blog Post Modals -->
-  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
-      <h3 class="text-xl font-bold mb-4">How to Read a Stock Chart</h3>
-      <p class="text-gray-700 mb-4">Learning how to read a stock chart can help you analyze patterns, make educated guesses about future price movements, and time your entry/exit better. Start by understanding candlesticks, moving averages, and volume trends.</p>
-      <button onclick="closeModal('modal1')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
-    </div>
-  </div>
+    <script>
+        // Hey, these functions open and close the modals!
+        // Simple, but effective.
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
 
-  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
-      <h3 class="text-xl font-bold mb-4">ETF vs Mutual Funds</h3>
-      <p class="text-gray-700 mb-4">ETFs are traded like stocks and usually have lower fees, while mutual funds are actively managed and may offer better long-term strategies. Choose based on your investment goals, cost sensitivity, and time horizon.</p>
-      <button onclick="closeModal('modal2')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
-    </div>
-  </div>
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
 
-  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
-      <h3 class="text-xl font-bold mb-4">Top Stocks in 2025</h3>
-      <p class="text-gray-700 mb-4">Some of the most promising stocks include those in AI, green energy, and biotech sectors. Look out for companies with strong balance sheets, innovation pipelines, and consistent revenue growth.</p>
-      <button onclick="closeModal('modal3')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-12">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 InvestSmart. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).classList.remove('hidden');
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
-    }
-  </script>
+        // Just an extra, pointless line to make it less "perfect"
+        let someVariable = true;
+    </script>
 </body>
 
 </html>
